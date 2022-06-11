@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Montserrat:wght@400;700&display=swap');
+
+$fontMain: 'Montserrat', sans-serif;
+$mainColour: #0078E7;
+
+body {
+    background: url(./img/bg.png);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    height: 100vh;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 3fr 2fr;
+    grid-template-areas: 
+    "title navbar"
+    "hero-subheadline hero-image"
+    "hero-headline hero-image"
+    "hero-ctabutton hero-image";
+}
+
+#title {
+    grid-area: title;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 20px;
+    color: $mainColour;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#navbar {
+    grid-area: navbar;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+
+        li {
+            padding-left: 20px;
+            padding-right: 20px;
+            button {
+                font-family: $fontMain;
+                font-size: 27px;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+            .current {
+                border-bottom: 1px solid #0078E7;
+            }
+        }
+    }
+}
+
+#hero-subheadline {
+    grid-area: hero-subheadline;
+    display: flex;
+    align-items: flex-end;
+    font-family: $fontMain;
+    color: #7C7C7C;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 19px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#hero-headline {
+    grid-area: hero-headline;
+    font-family: $fontMain;
+    font-weight: 700;
+    font-size: 80px;
+    max-width: 11ch;
+}
+
+#hero-ctabutton {
+    grid-area: hero-ctabutton;
+    margin-top: 20px;
+
+    button {
+        font-family: $fontMain;
+        font-weight: 700;
+        color: white;
+        background-color: $mainColour;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 46px;
+        gap: 15px;
+        border: none;
+        border-radius: 57px;
+        cursor: pointer;
+    }
+}
+    
+
+#hero-image {
+    display: flex;
+    justify-content: end;
+    grid-area: hero-image;
+    div {
+        background-image: url(./img/heropic.jpeg);
+        background-size: cover;
+        width: 681px;
+        height: 597px;
+        margin-top: 120px;
+    }
+}
+
+#menu-container {
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-start: hero-subheadline;
+    grid-row-end: hero-ctabutton;
+    grid-column-start: hero-subheadline;
+    grid-column-end: hero-image;
+    gap: 40px;
+    background-color: white;
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #item1 {
+                background: url(../src/img/menuitem1.jpg);
+                background-size: cover;
+                width: 213px;
+                height: 213px;
+            }
+
+            #item2 {
+                background: url(../src/img/menu-item2.jpeg);
+                background-size: cover;
+                width: 213px;
+                height: 213px;
+            }
+
+            #item3 {
+                background: url(../src/img//menu-item3.jpeg);
+                background-size: cover;
+                width: 213px;
+                height: 213px;
+            }
+            
+            #item4 {
+                background: url(../src/img/menu-item4.jpeg);
+                background-size: cover;
+                width: 213px;
+                height: 213px;
+            }
+
+            #item5 {
+                background: url(../src/img/menu-item5.jpeg);
+                background-size: cover;
+                width: 213px;
+                height: 213px;
+            }
+
+            #item6 {
+                background: url(../src/img/menu-item6.jpeg);
+                background-size: cover;
+                width: 213px;
+                height: 213px;
+            }
+
+            #item7 {
+                background: url(../src/img/menu-item7.jpeg);
+                background-size: cover;
+                width: 213px;
+                height: 213px;
+            }
+
+            #item8 {
+                background: url(../src/img/menu-item8.jpeg);
+                background-size: cover;
+                width: 213px;
+                height: 213px;
+            }
+        }
+}
+
+.item-desc {
+    font-family: $fontMain;
+    max-width: 205px;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 5px;
+}
