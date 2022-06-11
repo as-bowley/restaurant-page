@@ -30,6 +30,7 @@ body {
     display: flex;
     align-items: center;
     white-space: nowrap;
+    max-height: 110px;
 }
 
 #navbar {
@@ -37,6 +38,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    max-height: 110px;
 
     ul {
         display: flex;
@@ -55,6 +57,7 @@ body {
             }
             .current {
                 border-bottom: 1px solid #0078E7;
+                border-width: 80%;
             }
         }
     }
@@ -193,4 +196,37 @@ body {
     font-size: 12px;
     line-height: 20px;
     margin-top: 5px;
+}
+
+#contact-container {
+    font-family: $fontMain;
+    line-height: 21.94px;
+    grid-row-start: hero-subheadline;
+    grid-row-end: hero-ctabutton;
+    grid-column-start: hero-subheadline;
+    grid-column-end: hero-image;
+    margin-top: 100px;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(255, 255, 255);
+    width: 80vh;
+    padding: 40px;
+    #contact-left {
+        #contact-title {
+            color: $mainColour;
+            margin-bottom: 70px;
+        }
+    }
+    #contact-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        #map-img {
+            background: url(../src/img/map.jpg);
+            width: 440px;
+            height: 440px;
+            background-size: cover;
+        }
+    }
 }
