@@ -9,6 +9,7 @@ body {
     margin-right: 10%;
     margin-top: 3%;
     height: 100vh;
+    max-width: -webkit-fill-available;
 }
 
 #content {
@@ -30,7 +31,7 @@ body {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    max-height: 110px;
+    max-height: 100px;
 }
 
 #navbar {
@@ -38,7 +39,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    max-height: 110px;
+    height: 100px;
 
     ul {
         display: flex;
