@@ -1,4 +1,4 @@
 import loadSite from "./initsite";
-import './style.scss';
+import "./style.scss";
 
 loadSite();
